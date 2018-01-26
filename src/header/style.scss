@@ -1,0 +1,26 @@
+header {
+    padding: 0 1vh 5vh;
+    @include clearfix;
+
+    h1,
+    h2 {
+        float: left;
+        line-height: 5vh;
+        text-transform: lowercase;
+    }
+
+    h1 {
+        font-size: 5vh;
+        font-weight: 900;
+        letter-spacing: -.075em;
+    }
+
+    h2 {
+        padding-left: 2vh;
+        font-size: 4vh;
+        font-weight: 200;
+        color: rgba(#fff, .5);
+        border-left: 1px solid rgba(#fff, .25);
+        margin-left: 2vh;
+    }
+}

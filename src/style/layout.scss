@@ -1,0 +1,50 @@
+#payday,
+#app {
+    height: 100vh;
+    position: relative;
+}
+
+#payday { overflow: hidden; }
+
+#app {
+    padding: 10vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; // Momentum, baby!
+}
+
+.columns,
+.rows {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.columns .column,
+.rows .row {
+    flex: 1;
+    min-width: 0;
+}
+
+.columns .column.shrink,
+.rows .row.shrink {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+.columns .column.grow,
+.rows .row.grow {
+    flex-grow: 1;
+    flex-shrink: 100;
+    flex-basis: 100%;
+}
+
+.columns { flex-direction: row; }
+.rows { flex-direction: column; }
+
+svg[class^="icon-"] {
+    display: inline-block;
+    fill: currentColor;
+    pointer-events: none;
+}

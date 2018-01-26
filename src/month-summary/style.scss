@@ -1,0 +1,35 @@
+#month-summary {
+    .day-counts {
+        padding: 0 1vh 2.5vh;
+        font-size: 3vh;
+        font-weight: 200;
+        color: rgba(#fff, .5);
+
+        strong {
+            font-weight: 900;
+            color: #fff;
+        }
+    }
+
+    .progress {
+        padding: 1vh;
+        background: #fff;
+        // background: repeating-linear-gradient(
+        //     -45deg,
+        //     transparent,
+        //     transparent .5vw,
+        //     map-get($color, main) .5vw,
+        //     map-get($color, main) 1vw,
+        //     transparent 1vw
+        // );
+
+        > .columns {
+            height: 5vh;
+            background: map-get($color, profile);
+
+            > .column.holidays {
+                background: adjust-hue(map-get($color, profile), 15deg);
+            }
+        }
+    }
+}
